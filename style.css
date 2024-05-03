@@ -1,15 +1,22 @@
 :root {
-  --logo-color: hsla(21, 100%, 66%, 1);
+  --logo-lightness: 66%;
+  --logo-color: hsla(21, 100%, var(--logo-lightness), 1);
+  --logo-pulse: hsla(21, 100%, calc(var(--logo-lightness) - 35%), 1);
 }
 
 body {
   background-color: black;
   color: white;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
 .container {
   width: 100vw;
   height: 100vh;
+  max-width: 100vw;
+  max-height: 100vh;
+  overflow: hidden;
   display: flex;
   justify-content: center;
 }
@@ -20,10 +27,29 @@ body {
   aspect-ratio: 1 / 1;
 }
 
+@keyframes pulse {
+  0% {
+  fill: var(--logo-color);
+  filter: drop-shadow(0 0 10px var(--logo-color))
+    drop-shadow(0 0 5px var(--logo-color));
+  }
+  50% {
+  fill: var(--logo-pulse);
+  filter: drop-shadow(0 0 10px var(--logo-pulse))
+    drop-shadow(0 0 5px var(--logo-pulse));
+  }
+  100% {
+  fill: var(--logo-color);
+  filter: drop-shadow(0 0 10px var(--logo-color))
+    drop-shadow(0 0 5px var(--logo-color));
+  }
+}
+
 .svg-glow {
   fill: var(--logo-color);
   filter: drop-shadow(0 0 10px var(--logo-color))
     drop-shadow(0 0 5px var(--logo-color));
+  animation: pulse 4s ease-in-out infinite;
 }
 
 .svg-logo {
