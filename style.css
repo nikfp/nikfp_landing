@@ -1,5 +1,5 @@
 :root {
-  --logo-color: hsla(21, 100%, 66%, 1)
+  --logo-color: hsla(21, 100%, 66%, 1);
 }
 
 body {
@@ -17,12 +17,13 @@ body {
 .logo-container {
   max-width: 100vw;
   max-height: 100vh;
-  aspect-ratio: 1 / 1;;
+  aspect-ratio: 1 / 1;
 }
 
 .svg-glow {
   fill: var(--logo-color);
-  filter: drop-shadow(0 0 15px var(--logo-color))
+  filter: drop-shadow(0 0 10px var(--logo-color))
+    drop-shadow(0 0 5px var(--logo-color));
 }
 
 .svg-logo {
