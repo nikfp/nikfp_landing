@@ -29,19 +29,19 @@ body {
 
 @keyframes pulse {
   0% {
-  fill: var(--logo-color);
-  filter: drop-shadow(0 0 10px var(--logo-color))
-    drop-shadow(0 0 5px var(--logo-color));
+    fill: var(--logo-color);
+    filter: drop-shadow(0 0 10px var(--logo-color))
+      drop-shadow(0 0 5px var(--logo-color));
   }
   50% {
-  fill: var(--logo-pulse);
-  filter: drop-shadow(0 0 10px var(--logo-pulse))
-    drop-shadow(0 0 5px var(--logo-pulse));
+    fill: var(--logo-pulse);
+    filter: drop-shadow(0 0 10px var(--logo-pulse))
+      drop-shadow(0 0 5px var(--logo-pulse));
   }
   100% {
-  fill: var(--logo-color);
-  filter: drop-shadow(0 0 10px var(--logo-color))
-    drop-shadow(0 0 5px var(--logo-color));
+    fill: var(--logo-color);
+    filter: drop-shadow(0 0 10px var(--logo-color))
+      drop-shadow(0 0 5px var(--logo-color));
   }
 }
 
