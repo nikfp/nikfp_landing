@@ -10,7 +10,8 @@ body {
   box-sizing: border-box;
   margin: 0;
   overflow: hidden;
-  font-family: sans-serif;
+  font-family: "Cinzel", sans-serif;
+  letter-spacing: .2rem;
 }
 
 .container {
@@ -79,9 +80,9 @@ body {
   border-color: var(--logo-color);
   border-radius: 0.5rem;
   font-size: 2rem;
-  font-weight: bold;
+  font-weight: medium;
   text-align: center;
-  padding: 0.5rem;
+  padding: 0.75rem .65rem .5rem .75rem;
   position: relative;
   color: var(--logo-color);
   transition: all 50ms ease-in-out;
@@ -116,6 +117,9 @@ body {
   background: var(--logo-color);
   color: var(--clr-bgr);
   text-shadow: none;
+  font-weight: bolder;
+  padding-left: .60rem;
+  padding-right: .45rem;
 }
 
 .button:hover::after,
