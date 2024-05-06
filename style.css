@@ -67,22 +67,21 @@ body {
   height: 20%;
   display: flex;
   justify-content: center;
-  gap: 3rem;
+  gap: 3em;
   flex-wrap: wrap;
+  margin: 2em;
 }
 
 .button {
   font-size: 2em;
   cursor: pointer;
-  height: 1em;
+  height: 1.5em;
   line-height: 1em;
-  /* background-color: hsla(0, 0%, 0%, 0); */
+  box-sizing: border-box;
   background-color: black;
   border: 0.0625em solid;
-  /* border: 0.125rem solid; */
   border-color: var(--logo-color);
   border-radius: 0.25em;
-  text-align: center;
   padding: 0.25em;
   font-weight: medium;
   position: relative;
@@ -119,9 +118,9 @@ body {
   background: var(--logo-color);
   color: var(--clr-bgr);
   text-shadow: none;
-  font-weight: bolder;
-  padding-left: .60rem;
-  padding-right: .45rem;
+  /* font-weight: bolder; */
+
+  /* letter-spacing: -0.05em; */
 }
 
 .button:hover::after,
