@@ -62,6 +62,7 @@ body {
 }
 
 .button-row {
+  font-size: 1rem;
   height: 20%;
   display: flex;
   justify-content: center;
@@ -70,23 +71,24 @@ body {
 }
 
 .button {
+  font-size: 2em;
   cursor: pointer;
-  height: 2rem;
-  line-height: 2rem;
+  height: 1em;
+  line-height: 1em;
   /* background-color: hsla(0, 0%, 0%, 0); */
   background-color: black;
-  border: 0.125rem solid;
+  border: 0.0625em solid;
+  /* border: 0.125rem solid; */
   border-color: var(--logo-color);
-  border-radius: 0.5rem;
-  font-size: 2rem;
+  border-radius: 0.25em;
   font-weight: bold;
   text-align: center;
-  padding: 0.5rem;
+  padding: 0.25em;
   position: relative;
   color: var(--logo-color);
   transition: all 50ms ease-in-out;
-  filter: drop-shadow(0 0 .125rem var(--logo-color));
-  text-shadow: 0 0 .125rem var(--clr-bgr);
+  filter: drop-shadow(0 0 .0625em var(--logo-color));
+  text-shadow: 0 0 .0625em var(--clr-bgr);
 }
 
 .button a {
@@ -98,7 +100,7 @@ body {
   cursor: none;
   content: "";
   position: absolute;
-  top: 90%;
+  top: 120%;
   left: 0;
   height: 100%;
   width: 100%;
@@ -125,6 +127,6 @@ body {
   width: 120%;
   left: -10%;
   transform: rotateX(40deg) scale(1, 0.85);
-  /* filter: blur(2.5em); */
+  filter: blur(2em);
   opacity: 1;
 }
