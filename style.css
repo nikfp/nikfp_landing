@@ -37,6 +37,7 @@ body {
 .logo {
   position: relative;
   perspective: 4em;
+  padding: 2rem;
 }
 
 .logo::before {
