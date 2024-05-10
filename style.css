@@ -116,7 +116,7 @@ body {
 
 .button:hover,
 .button:active,
-.button:focus {
+.button:focus-visible {
   background: var(--logo-color);
   color: var(--clr-bgr);
   text-shadow: none;
@@ -127,7 +127,7 @@ body {
 
 .button:hover::after,
 .button:active::after,
-.button:focus::after {
+.button:focus-visible::after {
   height: 120%;
   width: 120%;
   left: -10%;
