@@ -131,7 +131,7 @@ body {
   }
 }
 
-.button:active,
+/* .button:active, */
 .button:focus-visible {
   background: var(--logo-color);
   color: var(--clr-bgr);
@@ -141,7 +141,7 @@ body {
   /* letter-spacing: -0.05em; */
 }
 
-.button:active::after,
+/* .button:active::after, */
 .button:focus-visible::after {
   height: 120%;
   width: 120%;
