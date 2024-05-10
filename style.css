@@ -131,19 +131,19 @@ body {
   }
 }
 
-/* .button:active, */
-/* .button:focus-visible { */
-/*   background: var(--logo-color); */
-/*   color: var(--clr-bgr); */
-/*   text-shadow: none; */
-/* } */
+.button:active,
+.button:focus-visible {
+  background: var(--logo-color);
+  color: var(--clr-bgr);
+  text-shadow: none;
+}
 
-/* .button:active::after, */
-/* .button:focus-visible::after { */
-/*   height: 120%; */
-/*   width: 120%; */
-/*   left: -10%; */
-/*   transform: rotateX(40deg) scale(1, 0.85); */
-/*   filter: blur(2em); */
-/*   opacity: 1; */
-/* } */
+.button:active::after,
+.button:focus-visible::after {
+  height: 120%;
+  width: 120%;
+  left: -10%;
+  transform: rotateX(40deg) scale(1, 0.85);
+  filter: blur(2em);
+  opacity: 1;
+}
