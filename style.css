@@ -11,7 +11,7 @@ body {
   margin: 0;
   overflow: hidden;
   font-family: "Cinzel", sans-serif;
-  letter-spacing: .2rem;
+  letter-spacing: 0.2rem;
 }
 
 .container {
@@ -89,8 +89,8 @@ body {
   position: relative;
   color: var(--logo-color);
   transition: all 50ms ease-in-out;
-  filter: drop-shadow(0 0 .0625em var(--logo-color));
-  text-shadow: 0 0 .0625em var(--clr-bgr);
+  filter: drop-shadow(0 0 0.0625em var(--logo-color));
+  text-shadow: 0 0 0.0625em var(--clr-bgr);
 }
 
 .button a {
@@ -114,7 +114,23 @@ body {
   transition: all 50ms ease-in-out;
 }
 
-.button:hover,
+@media (hover: hover) {
+  .button:hover {
+    background: var(--logo-color);
+    color: var(--clr-bgr);
+    text-shadow: none;
+  }
+
+  .button:hover::after {
+    height: 120%;
+    width: 120%;
+    left: -10%;
+    transform: rotateX(40deg) scale(1, 0.85);
+    filter: blur(2em);
+    opacity: 1;
+  }
+}
+
 .button:active,
 .button:focus-visible {
   background: var(--logo-color);
@@ -125,7 +141,6 @@ body {
   /* letter-spacing: -0.05em; */
 }
 
-.button:hover::after,
 .button:active::after,
 .button:focus-visible::after {
   height: 120%;
