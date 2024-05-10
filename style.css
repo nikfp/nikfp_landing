@@ -114,7 +114,7 @@ body {
   transition: all 50ms ease-in-out;
 }
 
-@media (hover: hover) {
+@media (hover: hover) and (pointer: fine) {
   .button:hover {
     background: var(--logo-color);
     color: var(--clr-bgr);
