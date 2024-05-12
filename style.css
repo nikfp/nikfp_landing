@@ -1,7 +1,18 @@
 :root {
   --logo-lightness: 60%;
   --logo-color: hsla(21, 100%, var(--logo-lightness), 1);
+  --logo-dark: hsla(21, 100%, 0%, 1);
   --clr-bgr: hsla(21, 100%, calc(var(--logo-lightness) - 56%), 1);
+}
+
+@keyframes fade-in-background {
+  0% {
+    background-color: black;
+  }
+
+  100% {
+    background-color: var(--clr-bgr);
+  }
 }
 
 body {
@@ -12,6 +23,7 @@ body {
   overflow: hidden;
   font-family: "Cinzel", sans-serif;
   letter-spacing: 0.2rem;
+  animation: 3s fade-in-background ease-in;
 }
 
 .container {
@@ -40,6 +52,27 @@ body {
   padding: 2rem;
 }
 
+@keyframes fade-in-glow {
+  0% {
+    background-color: var(--logo-dark);
+  }
+  100% {
+    background-color: var(--logo-color);
+  }
+}
+
+@keyframes pulse-glow {
+  0% {
+  opacity: 0.7;
+  }
+  50% {
+  opacity: 0.3;
+  }
+  100% {
+  opacity: 0.7;
+  }
+}
+
 .logo::before {
   content: "";
   background-color: var(--logo-color);
@@ -52,12 +85,43 @@ body {
   transform: rotateX(30deg) scale(1, 0.25);
   filter: blur(2.5em);
   opacity: 0.7;
+  animation: 3s fade-in-glow ease-in, 3s pulse-glow infinite ease-in-out 3s;
+}
+
+@keyframes fade-in-backdrop {
+  0% {
+    filter: drop-shadow(0 0 -2px var(--logo-color))
+      drop-shadow(0 0 0px var(--logo-color));
+  }
+  100% {
+    filter: drop-shadow(0 0 10px var(--logo-color))
+      drop-shadow(0 0 5px var(--logo-color));
+  }
+}
+
+@keyframes pulse-backdrop {
+  0% {
+    filter: drop-shadow(0 0 10px var(--logo-color))
+      drop-shadow(0 0 5px var(--logo-color));
+  }
+  50% {
+    filter: drop-shadow(0 0 5px var(--logo-color))
+      drop-shadow(0 0 1px var(--logo-color));
+  }
+  100% {
+    filter: drop-shadow(0 0 10px var(--logo-color))
+      drop-shadow(0 0 5px var(--logo-color));
+  }
 }
 
 .svg-glow {
   fill: var(--logo-color);
   filter: drop-shadow(0 0 10px var(--logo-color))
     drop-shadow(0 0 5px var(--logo-color));
+  opacity: 1;
+  animation:
+    3s fade-in-backdrop,
+    pulse-backdrop 3s infinite ease-in-out 3s;
 }
 
 .svg-logo {
@@ -72,6 +136,19 @@ body {
   gap: 3em;
   flex-wrap: wrap;
   margin: 2em;
+}
+
+@keyframes fade-in-buttons {
+  0% {
+    color: var(--logo-dark);
+    border-color: var(--logo-dark);
+    filter: drop-shadow(0 0 0.0625em var(--logo-dark));
+  }
+  100% {
+    color: var(--logo-color);
+    border-color: var(--logo-color);
+    filter: drop-shadow(0 0 0.0625em var(--logo-color));
+  }
 }
 
 .button {
@@ -91,6 +168,7 @@ body {
   transition: all 50ms ease-in-out;
   filter: drop-shadow(0 0 0.0625em var(--logo-color));
   text-shadow: 0 0 0.0625em var(--clr-bgr);
+  animation: 3s fade-in-buttons ease-in;
 }
 
 .button a {
@@ -113,6 +191,7 @@ body {
   opacity: 0.7;
   transition: all 50ms ease-in-out;
   pointer-events: none;
+  animation: 3s fade-in-glow;
 }
 
 @media (hover: hover) and (pointer: fine) {
